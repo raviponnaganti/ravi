@@ -1,0 +1,111 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.34-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema states
+--
+
+CREATE DATABASE IF NOT EXISTS states;
+USE states;
+
+--
+-- Definition of table `city`
+--
+
+DROP TABLE IF EXISTS `city`;
+CREATE TABLE `city` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `state_id` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `city`
+--
+
+/*!40000 ALTER TABLE `city` DISABLE KEYS */;
+INSERT INTO `city` (`id`,`state_id`,`city`) VALUES 
+ (1,'2','VIJAYAWADA'),
+ (2,'2','KAKINADA'),
+ (3,'2','VYZAG'),
+ (4,'11','BENGALURU'),
+ (5,'11','HUBALLI'),
+ (6,'11','BALLARI'),
+ (7,'11','MYSORE'),
+ (8,'11','MANGALURU'),
+ (9,'11','TUMUKURU'),
+ (10,'11','HOSEPETE'),
+ (11,'12','COCHIN'),
+ (12,'12','THRIVANDRUM'),
+ (13,'8','AHMADABAD'),
+ (14,'7','PANAJI'),
+ (15,'7','VASCO'),
+ (16,'17','CHENNAI'),
+ (17,'18','HYDERABAD'),
+ (18,'13','BHUPAL'),
+ (19,'4','PATNA'),
+ (20,'19','KOLKATHA');
+/*!40000 ALTER TABLE `city` ENABLE KEYS */;
+
+
+--
+-- Definition of table `state`
+--
+
+DROP TABLE IF EXISTS `state`;
+CREATE TABLE `state` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `state` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `state`
+--
+
+/*!40000 ALTER TABLE `state` DISABLE KEYS */;
+INSERT INTO `state` (`id`,`state`) VALUES 
+ (2,'ANDHRA PRADESH'),
+ (3,'ARUNACHAL PRADESH'),
+ (4,'BIHAR'),
+ (5,'CHATISHGARH'),
+ (6,'DELHI'),
+ (7,'GOA'),
+ (8,'GUJARAT'),
+ (9,'HARIYANA'),
+ (10,'JAMMU &KASHMIR'),
+ (11,'KARNATAKA'),
+ (12,'KERALA'),
+ (13,'MADHYA PRADESH'),
+ (14,'PUNJAB'),
+ (15,'RAJASTHAN'),
+ (16,'SIKKIM'),
+ (17,'TAMIL NADHU'),
+ (18,'TELANGANA'),
+ (19,'WEST BENGAL');
+/*!40000 ALTER TABLE `state` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
